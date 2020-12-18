@@ -1,5 +1,11 @@
 <h1>新規投稿</h1>
 
+<% @book.errors.full_messages.each do |message| %>
+ <div class="form-error">
+  <%= message %>
+ </div>
+<% end %>
+
 <%= form_with model:@book, local:true do |f| %>
 
   <h4>Title</h4>

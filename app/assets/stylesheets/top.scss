@@ -1,3 +1,30 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+body {
+  margin: 33px;
+  color: #333333;
+}
+
+h1 {
+  margin: 0 auto;
+  color: #333333;
+  font-size: 26px;
+}
+
+.top-text {
+  margin: 33px;
+  color: #333333;
+}
+
+.button {
+  margin: 33px;
+  color: #666666;
+}
