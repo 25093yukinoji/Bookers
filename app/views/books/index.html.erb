@@ -26,7 +26,7 @@
         <td>
           <%= link_to "show", book_path(book.id) %>
           <%= link_to "edit", edit_book_path(book.id) %>
-          <%= link_to "destroy", book_path(@book), method: :delete, "data-confirm" => "Are you sure?" %>
+          <%= link_to "destroy", book_path(book), method: :delete, "data-confirm" => "Are you sure?" %>
         </td>
       </tr>
     <% end %>
@@ -35,11 +35,16 @@
 
 
   <h2>New book</h2>
-
+  <% if @book.errors.any? %>
+  <%= @book.errors.count %>件のエラー
+  <% @book.errors.full_messages.each do |message| %>
+  <%= message %>
+  <% end %>
+  <% end %>
   <%= form_for(@book) do |f| %>
 
   <p>Title</p>
-  <%=f.text_filed :title %>
+  <%=f.text_field :title %>
 
   <p>Body</p>
   <%= f.text_area :body %>
