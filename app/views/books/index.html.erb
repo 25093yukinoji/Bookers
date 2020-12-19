@@ -4,7 +4,7 @@
 
 
   <p id="notice"></p>
-  <h1>Books</h1>
+  <h1 >Books</h1>
 
   <table>
     <thead>
@@ -43,10 +43,10 @@
   <% end %>
   <%= form_for(@book) do |f| %>
 
-  <p>Title</p>
+  <p class="index-title">Title</p>
   <%=f.text_field :title %>
 
-  <p>Body</p>
+  <p class="index-body">Body</p>
   <%= f.text_area :body %>
 
   <br><%= f.submit 'Create Book' %></br>
