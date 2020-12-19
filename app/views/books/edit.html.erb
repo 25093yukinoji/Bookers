@@ -1,4 +1,9 @@
-<h1>Editing Book</h1
+<h1>Editing Book</h1>
+<% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+<% end %>
 <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
 
   <h4>Title</h4>
@@ -7,3 +12,6 @@
   <%= f.text_field :body %>
   <%= f.submit 'Update Book' %>
 <% end %>
+<%= link_to "Show", book_path(@book) %>
+|
+<a href="/books">Back</a></p>
